@@ -1,0 +1,90 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    commonjs: true,
+    'jest/globals': true,
+  },
+  extends: [
+    'eslint:recommended',
+    'prettier',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parserOptions: {
+    ecmaVersion: 9,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+  },
+  plugins: ['react', 'prettier', 'jest'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  rules: {
+    '@typescript-eslint/no-empty-function': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    'prettier/prettier': ['error'],
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/no-empty-interface': 0,
+    '@typescript-eslint/no-var-requires': 0,
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: true,
+      },
+    ],
+    // 'no-console': ['error', { allow: ['warn', 'error'] }],
+    'object-curly-spacing': [1, 'always'],
+    'react/jsx-uses-react': 'off',
+    'react/jsx-uses-vars': 1,
+    'react/boolean-prop-naming': [
+      'error',
+      {
+        rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
+      },
+    ],
+    'react/button-has-type': 1,
+    'react/destructuring-assignment': 1,
+    'react/jsx-closing-bracket-location': 1,
+    'react/jsx-closing-tag-location': 1,
+    'react/jsx-curly-brace-presence': [1, 'never'],
+    'react/jsx-curly-newline': [1, 'consistent'],
+    'react/jsx-curly-spacing': [
+      1,
+      {
+        when: 'never',
+        children: true,
+      },
+    ],
+    'react/jsx-equals-spacing': [1, 'never'],
+    // 'react/jsx-handler-names': 1,
+    'react/jsx-indent-props': [1, 2],
+    'react/jsx-key': [
+      1,
+      {
+        checkFragmentShorthand: true,
+      },
+    ],
+    'react/jsx-no-duplicate-props': 1,
+    'react/jsx-no-target-blank': 1,
+    'react/jsx-wrap-multilines': 1,
+    'react/no-will-update-set-state': 1,
+    'react/react-in-jsx-scope': 'off',
+    'react/require-render-return': 1,
+    'react/self-closing-comp': 1,
+    'react/state-in-constructor': 1,
+    'react/style-prop-object': 1,
+    'react/void-dom-elements-no-children': 1,
+    '@typescript-eslint/ban-ts-comment': 0,
+  },
+};
